@@ -6,7 +6,6 @@ let host = config.env === "development" ? "http://localhost:8082" : "https://che
 let path = config.env === "development" ? "/socket.io" : "/game/socket.io";
 
 export function getSocket(accessToken: string) {
-  console.log("Getting socket with access token:", accessToken);
   if (!socket) {
     socket = io(host, {
       path: path, 
